@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+    <ImageView
+            android:id="@+id/imageMovieCover"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="#ff00ff"
+            app:layout_constraintDimensionRatio="1:1.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:id="@+id/textMovieTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            tools:text="asdfsdfadsf"
+            app:layout_constraintTop_toTopOf="@id/imageMovieCover"
+            app:layout_constraintStart_toEndOf="@id/imageMovieCover"/>
+
+    <RatingBar
+            android:id="@+id/ratingMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="10"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            app:layout_constraintTop_toBottomOf="@id/textMovieTitle"
+            app:layout_constraintStart_toStartOf="@id/textMovieTitle"/>
+
+    <TextView
+            android:id="@+id/textYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2019"
+            app:layout_constraintStart_toStartOf="@id/textMovieTitle"
+            app:layout_constraintTop_toBottomOf="@id/ratingMovie"/>
+
+    <TextView
+            android:id="@+id/textDirector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2019"
+            app:layout_constraintStart_toStartOf="@id/textMovieTitle"
+            app:layout_constraintTop_toBottomOf="@id/textYear"/>
+
+    <TextView
+            android:id="@+id/textStarring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2019"
+            app:layout_constraintStart_toStartOf="@id/textMovieTitle"
+            app:layout_constraintTop_toBottomOf="@id/textDirector"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

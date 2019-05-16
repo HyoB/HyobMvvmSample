@@ -11,8 +11,8 @@ class MovieMapper: BaseMapper<MovieVo, Movie> {
             Movie(
                 title = title,
                 cover = image,
-                rating = userRating?.toFloat()?:0F,
-                year = "2000",
+                rating = userRating.toFloat() / 2,
+                year = pubDate,
                 director = director,
                 starring = actor,
                 link = link

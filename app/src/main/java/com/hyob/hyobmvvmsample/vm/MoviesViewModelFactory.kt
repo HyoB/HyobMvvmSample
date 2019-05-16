@@ -1,15 +1,15 @@
 @file:Suppress("UNCHECKED_CAST")
 
-package com.hyob.hyobmvvmsample.util
+package com.hyob.hyobmvvmsample.vm
 
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.hyob.hyobmvvmsample.repo.AppRepository
 import com.hyob.hyobmvvmsample.view.activity.MoviesActivity
-import com.hyob.hyobmvvmsample.vm.MoviesViewModel
 
-object VmFactoryInjector {
+object MoviesViewModelFactory {
 
     private fun getMoviesFactory() =
         object : ViewModelProvider.NewInstanceFactory() {
@@ -18,7 +18,7 @@ object VmFactoryInjector {
             }
         }
 
-    fun getMoviesVm(activity: MoviesActivity) =
+    fun getMoviesVm(activity: AppCompatActivity) =
             ViewModelProviders.of(activity, getMoviesFactory()).get(MoviesViewModel::class.java)
 
 

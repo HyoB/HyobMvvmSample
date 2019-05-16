@@ -11,54 +11,58 @@
             android:id="@+id/imageMovieCover"
             android:layout_width="100dp"
             android:layout_height="150dp"
-            android:src="#ff00ff"
+            android:scaleType="centerCrop"
             app:layout_constraintDimensionRatio="1:1.5"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
             android:id="@+id/textMovieTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:textStyle="bold"
             android:layout_marginStart="15dp"
-            tools:text="asdfsdfadsf"
             app:layout_constraintTop_toTopOf="@id/imageMovieCover"
-            app:layout_constraintStart_toEndOf="@id/imageMovieCover"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageMovieCover"
+            tools:text="영화 제목"/>
 
     <RatingBar
             android:id="@+id/ratingMovie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:max="10"
-            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:numStars="5"
+            android:stepSize="0.5"
             app:layout_constraintTop_toBottomOf="@id/textMovieTitle"
-            app:layout_constraintStart_toStartOf="@id/textMovieTitle"/>
+            app:layout_constraintStart_toStartOf="@id/textMovieTitle"
+            style="@style/Widget.AppCompat.RatingBar.Small"/>
 
     <TextView
             android:id="@+id/textYear"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="2019"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/textMovieTitle"
-            app:layout_constraintTop_toBottomOf="@id/ratingMovie"/>
+            app:layout_constraintTop_toBottomOf="@id/ratingMovie"
+            tools:text="개봉 연도"/>
 
     <TextView
             android:id="@+id/textDirector"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="2019"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/textMovieTitle"
-            app:layout_constraintTop_toBottomOf="@id/textYear"/>
+            app:layout_constraintTop_toBottomOf="@id/textYear"
+            tools:text="감독"/>
 
     <TextView
             android:id="@+id/textStarring"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="2019"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/textMovieTitle"
-            app:layout_constraintTop_toBottomOf="@id/textDirector"/>
+            app:layout_constraintTop_toBottomOf="@id/textDirector"
+            tools:text="배우"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

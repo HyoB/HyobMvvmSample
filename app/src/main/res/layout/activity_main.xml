@@ -11,6 +11,10 @@
             android:id="@+id/editKeyword"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:lines="1"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/buttonSearch"
             app:layout_constraintEnd_toStartOf="@id/buttonSearch"/>

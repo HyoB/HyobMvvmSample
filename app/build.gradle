@@ -42,26 +42,26 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime:2.0.0"
     implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:2.0.0"
     implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha05'
-    kapt 'androidx.lifecycle:lifecycle-compiler:2.0.0'
-
+    implementation "androidx.paging:paging-runtime:2.1.0"
+    implementation "androidx.paging:paging-rxjava2:2.1.0"
     implementation "org.koin:koin-core:2.0.0-GA"
     implementation "org.koin:koin-core-ext:2.0.0-GA"
-    testImplementation "org.koin:koin-test:2.0.0-GA"
-
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
     implementation 'com.squareup.okhttp3:okhttp:4.0.0-alpha01'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.okio:okio:2.1.0'
-
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
     implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
-
     implementation 'com.github.bumptech.glide:glide:4.9.0'
 
+    kapt 'androidx.lifecycle:lifecycle-compiler:2.0.0'
+
     testImplementation 'junit:junit:4.12'
+    testImplementation "org.koin:koin-test:2.0.0-GA"
+
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }

@@ -15,7 +15,7 @@ object AppService {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .client(getClient())
-            .baseUrl("https://openapi.naver.com/v1/")
+            .baseUrl("https://openapi.naver.com/")
             .build()
 
     private fun getClient() =
@@ -24,8 +24,8 @@ object AppService {
             .addNetworkInterceptor { chain ->
                 val req = chain.request()
                     .newBuilder()
-                    .addHeader("X-Naver-Client-Id", "aklVRtJ4Pyh7hmAIRG0I")
-                    .addHeader("X-Naver-Client-Secret", "wtjCqpIlzm")
+                    .addHeader("X-Naver-Client-Id", "Input Your Naver ClientId")
+                    .addHeader("X-Naver-Client-Secret", "Input Your Naver Client Secret")
                     .build()
                 chain.proceed(req)
             }.build()
